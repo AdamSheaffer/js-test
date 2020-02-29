@@ -14,7 +14,7 @@ const searchFromLocation = (row, col, board, word, xMovement, yMovement) => {
   return (
     !word ||
     (board[row] !== undefined &&
-      word[0] == board[row][col] &&
+      word[0] === board[row][col] &&
       searchFromLocation(
         row + yMovement,
         col + xMovement,
