@@ -15,15 +15,15 @@ const wordExists = (board, word) => {
   return false;
 };
 
-const searchFromLocation = (coords, board, word, xMovment, yMovement) => {
+const searchFromLocation = (coords, board, word, xMovement, yMovement) => {
   if (!word) return true;
   const [row, col] = coords;
-  const nextCoords = [row + xMovment, col + yMovement];
+  const nextCoords = [row + xMovement, col + yMovement];
 
   return (
     board[row] !== undefined &&
     word[0] == board[row][col] &&
-    searchFromLocation(nextCoords, board, word.slice(1), xMovment, yMovement)
+    searchFromLocation(nextCoords, board, word.slice(1), xMovement, yMovement)
   );
 };
 
